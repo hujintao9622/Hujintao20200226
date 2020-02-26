@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.RegisterLoginActivity">
+<EditText
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:hint="手机号"
+    android:textSize="30dp"
+    android:id="@+id/rl_phone"
+    />
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="密码"
+        android:textSize="30dp"
+        android:id="@+id/rl_pwd"
+        />
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_btn_regis"
+        android:textSize="30dp"
+        android:text="注册"
+        android:layout_marginTop="20dp"
+        />
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_btn_login"
+        android:textSize="30dp"
+        android:text="登录"
+        android:layout_marginTop="20dp"
+        />
+</LinearLayout>
