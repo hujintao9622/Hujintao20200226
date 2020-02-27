@@ -1,6 +1,8 @@
 package com.bawei.hujintao.view.activity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -64,10 +66,10 @@ public class RegisterLoginActivity extends BaseActivity<RegisLoginPresenter> imp
 
     @Override
     public void onLoginSuccess(LoginBean loginBean) {
-        Intent intent = new Intent(RegisterLoginActivity.this,MainActivity.class);
-        intent.putExtra("key",true);
-        startActivity(intent);
-        finish();
+        ProgressDialog progressDialog = new ProgressDialog(this);
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDialog.show();
+        jump();
     }
 
     @Override
@@ -109,5 +111,12 @@ public class RegisterLoginActivity extends BaseActivity<RegisLoginPresenter> imp
                 mpresenter.getLoginData(ph2,sub2);
                 break;
         }
+    }
+    //封装网络跳转方法
+    public void jump(){
+        Intent intent = new Intent(RegisterLoginActivity.this,MainActivity.class);
+        intent.putExtra("key",true);
+        startActivity(intent);
+        finish();
     }
 }
