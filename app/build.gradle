@@ -66,4 +66,10 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:3.9.0'
     // AndroidX用户依赖android工具类库-MD5加密
     implementation 'com.blankj:utilcodex:1.26.0'
+
+//Fresco依赖
+    compile 'com.facebook.fresco:fresco:0.14.1'
+
+//gif动图
+    compile 'com.facebook.fresco:animated-gif:0.14.1'
 }
